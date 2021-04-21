@@ -1,27 +1,45 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'tutorapp/app.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'tutorapp/css/app.css' %}"/>
+    <script src="{% static 'tutorapp/js/main.js' %}"></script> 
 </head>
 
 <body>
-<div class="navbar">
-    <a href="{% url 'home' %}" class="navbar-brand">Главная</a>
-    <a href="{% url 'about' %}" class="navbar-item">О нас</a>
-    <a href="{% url 'contacts' %}" class="navbar-item">Контакты</a>
-    <a href="{% url 'digest' %}" class="navbar-item">Дайджест</a>
-    <a href="{% url 'promo' %}" class="navbar-item">Акции</a>
-    <a href="{% url 'tutors' %}" class="navbar-item">Наши преподаватели</a>
-    <a href="{% url 'vacancies' %}" class="navbar-item">Стать преподаватели</a>
+<div class="navbar_menu">
+    <div class="navbar-logo">
+        
+        <img class="logo" src="{% static '/tutorapp/media/logotipe.png'%}" alt="logo">
+    </div>
+    <div class="navbar">
+        <a href="{% url 'home' %}" class="navbar-brand">Дербетов</a>
+        <a href="{% url 'about' %}" class="navbar-item">О нас</a>
+        <a href="{% url 'contacts' %}" class="navbar-item">Контакты</a>
+        <a href="{% url 'digest' %}" class="navbar-item">Дайджест</a>
+        <a href="{% url 'promo' %}" class="navbar-item">Акции</a>
+        <a href="{% url 'tutors' %}" class="navbar-item">Наши преподаватели</a>
+        <a href="{% url 'vacancies' %}" class="navbar-item">Стать преподавателем</a>
+    
 </div>
-
-<div class="body-content">
-    {% block content %}
-    {% endblock %}
-
+<div class="wrapper-box">
+    <div class="wrapper">
+        <div class="col-s-1">
+            <h2>Описание</h2>
+        </div>
+    </div>
+    
+</div>
+<div class="wrapper-body">
+    <div class="body-content">
+        {% block content %}
+        {% endblock %}
+    
+    </div>
+    
 </div>
 
 </body>

@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+h2{
+    color: white;
+    margin: 0 0 0 0;
+    font-style: italic;
+}
+html, body{
+
+    background-image: url("/static/tutorapp/media/imgs.jpg"); 
+    min-height: 100%;
+    opacity: 0.8;
+    
+}
+body{
+    min-height: 100vh;
+    margin: 0;
+}
+.navbar_menu{
+    height: 4em;
+}
+
+.navbar-logo{
+    width: 5%;
+    height: 100%;
+    float: left;
+    margin-left: 3.5%;
+    /* opacity: 0.5; */
+}
+ .logo{
+     height: 60px;
+     width: 60px;
+     /* mix-blend-mode: multiply; */
+ }
+.navbar {
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    opacity: 0.8;
+    font-style: italic;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-image: url("/static/tutorapp/media/fon1.png");
+    text-align: center;
+    /* background-color: aqua; */
+    height: 100%;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+    margin-top: 15px;
+    padding-top: 25px;
+}
+
+.navbar-brand {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.navbar-item {
+    font-variant: small-caps;
+    margin-left: 30px;
+}
+
+.body-content {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 10px;
+}
+.wrapper-box{
+    margin: 0 10% 0 10%;
+    /* background-color: orange; */
+}
+.wrapper-body{
+    margin: 0 10% 0 10%;
+    /* background-color: cyan; */
+}
+.wrapper{
+    height: 30vh;
+    border: 10px;
+    padding: 10px;
+    background: url("/static/tutorapp/media/fon.png");
+}
+.col-s-1{
+    width: auto;
+    height: 50%;
+    background-color: blue;
+    opacity: 0.3;
+    text-align: center;
+}
+@media only screen and(max-width: 600px){
+    
+}
+@media only screen and(min-width: 600px){
+    
+}
+@media only screen and(min-width: 768px){
+    
+}
+@media only screen and(max-width: 992px){
+    
+}
+@media only screen and(max-width: 1200px){
+    
+}

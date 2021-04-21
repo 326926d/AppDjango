@@ -7,7 +7,7 @@ def home(request):
     return render(request, "tutorapp/base.html")
 
 def about(request):
-    return render(request, 'tutorapp/about.html', {'name': name, 'date': datetime.now()})
+    return render(request, 'tutorapp/about.html')
 def contacts(request):
     return render(request, "tutorapp/contacts.html")
 
