@@ -8,28 +8,42 @@ body{
     "nav article ads"
     "footer footer footer";
   grid-template-rows: 60px 1fr 60px;
-  grid-template-columns: 20% 1fr 15%;
+  grid-template-columns: 15% 1fr 15%;
   grid-gap: 10px;
   height: 100vh;
   margin: 0;
   padding: 0;
   }
 
-header {
+.header{
   background-image: url("/static/tutorapp/images/fonnav.png");
 }
-
-header a{
-  text-decoration: none;
-  margin-left: 20px;
+.header .icon{
+  display: none;
 }
 
-header, footer, article, nav, div {
+form{
+  float: right;
+  padding-right: 5em;
+}
+.header a{
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: large;
+}
+.header a:hover{
+  background-color:darkgrey;
+  color:darkblue;
+}
+
+.header, footer, article, nav, div {
   padding: 20px;
 }
 #pageHeader {
   grid-area: header;
+  padding-left: 15%;
 }
+
 #pageFooter {
   grid-area: footer;
   background-color: cadetblue;
@@ -49,12 +63,32 @@ header, footer, article, nav, div {
   @media only screen and (max-width: 550px) {
     .container {
       grid-template-columns: 1fr;
-      grid-template-rows: 10% 30% 40% 20% 20%;
+      grid-template-rows: 20% 20% 40% 20% 20%;
       grid-template-areas:
       "header"
       "nav"
       "article"
       "ads"
       "footer";
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .header a:not(:first-child) {display: none;}
+    .header a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .header.responsive {position: relative;}
+    .header.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .header.responsive a{
+      float: none;
+      display: block;
+      text-align: left;
     }
   }

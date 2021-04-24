@@ -4,21 +4,33 @@
     <head>
         <meta charset="utf-8"/>
         <title>{% block title %}{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
         {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static '/tutorapp/css/app.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static '/tutorapp/css/app.css' %}"/>   
+        <link rel="stylesheet" type="text/css" href="{% static '/tutorapp/js/main.js' %}"/>
+        <script src="{% static 'tutorapp/js/main.js'%}"></script>   
     </head>
-<body>
+<body onload="myFunction()">
 <div class="container">
-  <header id="pageHeader">
+  <div class="header" id="pageHeader">
       
-            <a href="{% url 'home' %}" class="navbar-brand">Главная</a>
+            <a href="{% url 'home' %}" class="navbar-brand">Дербетов</a>
             <a href="{% url 'about' %}" class="navbar-item">О нас</a>
-            <a href="{% url 'contacts' %}" class="navbar-item">Contact</a>
+            <a href="{% url 'contacts' %}" class="navbar-item">Контакты</a>
             <a href="{% url 'digest' %}" class="navbar-item">Дайджест</a>
             <a href="{% url 'tutors' %}" class="navbar-item">Наши преподаватели</a>
             <a href="{% url 'vacancies' %}" class="navbar-item">Стать преподавателем</a>
-  </header>
+            <form action="{% url 'search_results'%}" method="GET">
+              {% csrf_token %}
+                <input type="text" name="q">
+                <input type="submit" value="Поиск">
+            </form>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+        
+  </div>
   <article id="mainArticle">
     <div id="content2">
     <div class="body-content">
@@ -31,5 +43,6 @@
   <div id="siteAds">Ads</div>
   <footer id="pageFooter">Footer</footer>
 </div>
+
 </body>
 </html>

@@ -1,0 +1,17 @@
+{% extends "tutorapp/base.html" %}
+{% block title %}
+
+{% endblock %}
+{% block content %}
+{% if object_list %}
+<ol>
+    {% for Tutors in object_list %}
+    <li>
+        {{Tutors.name}}, {{Tutors.disciple}}
+    </li>
+    {% endfor%}
+</ol>
+{% else %}
+<p> Ничего не найдено</p>
+{% endif %}
+{% endblock %}
