@@ -18,6 +18,16 @@ body{
 .header{
   background-image: url("/static/tutorapp/images/fonnav.png");
 }
+/* .logo{
+  height: 60px;
+  width: 60px;
+}
+.navbar-logo{
+  width: 5%;
+  height: 100%;
+  float:left;
+  margin-left: 3.5%;
+} */
 .header .icon{
   display: none;
 }

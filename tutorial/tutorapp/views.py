@@ -32,6 +32,8 @@ class SearchResultsView(ListView):
     
     def get_queryset(self):
         query = self.request.GET.get('q')
+        # if query.islower()():
+        #     return query.upper()
         object_list = Tutors.objects.filter(
             Q(name__icontains = query) | Q(disciple__icontains = query)
         )
