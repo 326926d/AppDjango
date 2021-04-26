@@ -19,15 +19,18 @@ body{
   background-image: url("/static/tutorapp/images/fonnav.png");
 }
 /* .logo{
-  height: 60px;
-  width: 60px;
-}
-.navbar-logo{
-  width: 5%;
   height: 100%;
+  width: 60%;
+  float: left;
+  margin-bottom: 0;
+} */
+.navbar-logo .logo{
+  width: 2.5%;
+  height: auto;
   float:left;
   margin-left: 3.5%;
-} */
+  align-content: center;
+}
 .header .icon{
   display: none;
 }
@@ -46,12 +49,14 @@ form{
   color:darkblue;
 }
 
-.header, footer, article, nav, div {
+footer, article, nav, div {
   padding: 20px;
 }
 #pageHeader {
   grid-area: header;
-  padding-left: 15%;
+  padding-left: 5%;
+  padding-bottom: 0;
+  padding-top: 10px;
 }
 
 #pageFooter {
